@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +17,5 @@ use App\Http\Controllers\AuthController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/me', [AuthController::class, 'me']);
+
+Route::get('/me', 'AuthController@index');
